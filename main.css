@@ -189,3 +189,23 @@ body {
   line-height: 1.5;              /* Melhora legibilidade */
   font-family: 'Poppins', sans-serif; /* Fonte limpa pra contraste */
 }
+@media (max-width: 1024px) {
+  body {
+    font-size: 16px;
+    padding: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    font-size: 15px;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    font-size: 14px;
+    padding: 8px;
+  }
+}
