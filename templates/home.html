@@ -9,7 +9,7 @@
       href="https://fonts.googleapis.com/css2?family=Cormorant:wght@300;400;600&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="main.css" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}">
   </head>
     <body>
       <header class="navbar" aria-label="Cabeçalho do site">
@@ -27,7 +27,7 @@
             <p class="explicacao">Ferramenta completa para criar, editar e organizar fichas de RPG.<br>
             Simples, rápida e com visual totalmente personalizado.</p>
 
-            <a class="cta-btn" href="login.html" role="button">CRIAR SUA CONTA</a>
+            <a class="cta-btn" href="{{ url_for('login') }}" role="button">CRIAR SUA CONTA</a>
           </div>
         </section>
       </main>

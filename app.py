@@ -46,6 +46,14 @@ class FormLogin(FlaskForm):
     senha = PasswordField("Senha", validators=[DataRequired()])
     entrar = SubmitField("Entrar")
 
+@app.route("/")
+def home():
+    return render_template("home.html")
+
+@app.route("/fichas")
+def fichas():
+    return render_template("fichas.html")
+
 #Login / Registro
 @app.route("/login", methods=["GET", "POST"])
 def login():
@@ -58,7 +66,7 @@ def login():
         usuario = Usuario.query.filter_by(nome_usuario=entrada).first()
         if usuario and bcrypt.check_password_hash(usuario.senha, form_login.senha.data):
             login_user(usuario)
-            return redirect(url_for("inicio"))
+            return redirect(url_for("fichas"))
         else:
             flash("Login incorreto!", "erro")
 

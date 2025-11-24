@@ -61,7 +61,7 @@ body {
 }
 
 .hero{
-  background-image: url(img/backgtound-desktop.png);
+  background-image: url(/static/img/backgtound-desktop.png);
   background-position: center;
   background-size: cover; /*cobrir a tela toda/n deixa pixelado*/
   background-repeat: no-repeat;
